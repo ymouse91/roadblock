@@ -1,5 +1,5 @@
 /* offline-minimi */
-const CACHE_NAME = "roadblock-v1";
+const CACHE_NAME = "roadblock-v2";
 const FILES = [
   "./",
   "./index.html",
