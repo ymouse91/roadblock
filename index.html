@@ -2,7 +2,7 @@
 <html lang="fi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>RoadBlock – iPad/PC</title>
     <meta property="og:image" content="https://ymouse91.github.io/roadblock/icon192.png">
   <!-- PWA perus -->
@@ -56,6 +56,7 @@
     }
 
     html, body{
+      touch-action: pan-x pan-y;
       height: 100%;
       margin: 0;
       background: var(--bg);
@@ -627,13 +628,24 @@
 
 <script>
 (() => {
+  /* ---------------- Estä double-tap zoom ---------------- */
+  let _lastTap = 0;
+  document.addEventListener("touchend", (e) => {
+    const now = Date.now();
+    if(now - _lastTap < 300){
+      e.preventDefault();
+    }
+    _lastTap = now;
+  }, {passive: false});
+
   /* ---------------- iOS best-practice viewport ---------------- */
   function setVH(){
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
   window.addEventListener("resize", setVH, {passive:true});
-  window.addEventListener("orientationchange", setVH, {passive:true});
+  window.addEventListener("orientationchange", ()=>{ setTimeout(setVH, 100); }, {passive:true});
+  document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState==="visible") setVH(); });
   setVH();
 
   function isIOS(){
@@ -898,8 +910,19 @@
     document.documentElement.style.setProperty("--cell", cell + "px");
     document.documentElement.style.setProperty("--boardOuter", boardOuter + "px");
   }
-  window.addEventListener("resize", rebuildCellSize, {passive:true});
-  window.addEventListener("orientationchange", rebuildCellSize, {passive:true});
+  let _lastW = 0, _lastH = 0;
+  function rebuildIfChanged(){
+    const w = window.innerWidth, h = window.innerHeight;
+    if(Math.abs(w - _lastW) < 2 && Math.abs(h - _lastH) < 2) return;
+    _lastW = w; _lastH = h;
+    rebuildCellSize();
+  }
+  window.addEventListener("resize", rebuildIfChanged, {passive:true});
+  window.addEventListener("orientationchange", ()=>{ setTimeout(rebuildIfChanged, 100); }, {passive:true});
+  // Kun sovellus tulee takaisin etualalle, tarkista onko koko muuttunut
+  document.addEventListener("visibilitychange", ()=>{
+    if(document.visibilityState === "visible") rebuildIfChanged();
+  });
 
   /* ---------------- Game state ---------------- */
   const W = 6, H = 6;
