@@ -1,0 +1,1605 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>RoadBlock – iPad/PC</title>
+    <meta property="og:image" content="https://ymouse91.github.io/roadblock/icon192.png">
+  <!-- PWA perus -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0b1533"> <!-- Android/Chrome -->
+  <meta name="color-scheme" content="dark light">
+
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="RoadBlock">
+
+  <!-- Icons -->
+  <link rel="icon" href="icon192.png">
+  <link rel="apple-touch-icon" href="icon192.png">
+  <style>
+    :root{
+      --bg:#0b1533;
+      --ink:#eaf0ff;
+      --muted:rgba(234,240,255,.68);
+
+      --good:#49e2a8;
+      --bad:#ff5a6a;
+      --warn:#ffd35a;
+      --accent:#5b7cff;
+
+      /* JS asettaa --vh */
+      --vh: 1vh;
+
+      /* safe area */
+      --sat: env(safe-area-inset-top);
+      --sar: env(safe-area-inset-right);
+      --sab: env(safe-area-inset-bottom);
+      --sal: env(safe-area-inset-left);
+
+      /* layout */
+      --gap: 10px;
+      --pad: 12px;
+      --radius: 16px;
+
+      /* board sizing (JS) */
+      --cell: 54px;
+      --boardPad: 10px;
+      --boardOuter: 344px; /* cell*6 + boardPad*2 */
+
+      /* palette width on iPad landscape */
+      --palW: 340px;
+
+      /* status height (no layout jump) */
+      --statusH: clamp(74px, 9.5vh, 96px);
+    }
+
+    html, body{
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      overscroll-behavior: none;
+      overflow: hidden; /* EI SCROLLIA */
+    }
+    html{ background: var(--bg); }
+
+    #app{
+      height: calc(var(--vh) * 100);
+      padding:
+        calc(var(--pad) + var(--sat))
+        calc(var(--pad) + var(--sar))
+        calc(var(--pad) + var(--sab))
+        calc(var(--pad) + var(--sal));
+      display: grid;
+      grid-template-rows: auto var(--statusH) 1fr auto; /* status ei muuta mainin korkeutta */
+      gap: var(--gap);
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      user-select:none;
+      min-width: 0;
+    }
+    header .title{
+      display:flex;
+      flex-direction:column;
+      gap: 2px;
+      min-width: 0;
+    }
+    header h1{
+      margin:0;
+      font-size: 18px;
+      letter-spacing: .2px;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    header .sub{
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .btnbar{ display:flex; gap: 8px; flex-wrap:wrap; justify-content:flex-end; }
+    button{
+      appearance:none;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      color: var(--ink);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 850;
+      font-size: 14px;
+      cursor: pointer;
+      user-select:none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      white-space: nowrap;
+    }
+    button:active{ transform: translateY(1px); }
+    button.primary{ border-color: rgba(91,124,255,.5); background: rgba(91,124,255,.18); }
+    button.danger{ border-color: rgba(255,90,106,.60); background: rgba(255,90,106,.18); color: var(--ink); font-weight: 900; }
+    .danger:active{ transform: translateY(1px); }
+    .warn{ border-color: rgba(255,211,90,.55); background: rgba(255,211,90,.14); }
+    button.ghost{ background: transparent; border-color: rgba(255,255,255,.14); }
+
+    
+    select#puzzleSelect{
+      min-width: 160px;
+      height: 40px;
+      appearance:none;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      color: var(--ink);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 850;
+      font-size: 14px;
+      cursor: pointer;
+      user-select:none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      white-space: nowrap;
+      max-width: 44vw;
+    }
+    @media (min-width: 900px) and (orientation: landscape){
+      select#puzzleSelect{ max-width: 260px; }
+    }
+.card{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      padding: 12px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      overflow: hidden; /* EI SCROLLIA */
+      min-height: 0;
+    }
+
+    /* status: kiinteä korkeus */
+    #statusCard{ height: var(--statusH); }
+    #status{
+      height: 100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap: 6px;
+      min-width:0;
+    }
+    #msg{
+      font-weight: 950;
+      letter-spacing:.2px;
+      line-height: 1.15;
+      max-height: calc(1.15em * 2);
+      overflow: hidden;
+      display:-webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    #msg.ok{ color: var(--good); }
+    #msg.bad{ color: var(--bad); }
+
+    #hint{
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.2;
+      max-height: calc(1.2em * 2);
+      overflow: hidden;
+      display:-webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: var(--gap);
+      align-content: stretch;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* iPad vaaka */
+    @media (min-width: 900px) and (orientation: landscape){
+      main{
+        grid-template-columns: 1fr var(--palW);
+        align-items: stretch;
+      }
+      #boardWrap.card, #palette.card{
+        height: calc(var(--boardOuter) + 24px); /* board + card padding */
+      }
+    }
+
+    /* ----- board ----- */
+    #boardWrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height: 0;
+    }
+
+    #board{
+      position: relative;
+      width: var(--boardOuter);
+      height: var(--boardOuter);
+      padding: var(--boardPad);
+      border-radius: calc(var(--radius) + 6px);
+      border: 1px solid rgba(255,255,255,.14);
+      background:
+        radial-gradient(900px 500px at 50% -20%, rgba(93,120,255,.22), transparent 55%),
+        radial-gradient(700px 520px at 15% 0%, rgba(255,80,180,.14), transparent 52%),
+        rgba(255,255,255,.04);
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+      touch-action: none;
+      user-select:none;
+    }
+
+    .grid{
+      position:absolute;
+      left: var(--boardPad);
+      top: var(--boardPad);
+      width: calc(var(--cell) * 6);
+      height: calc(var(--cell) * 6);
+      display:grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      border-radius: 14px;
+      overflow:hidden;
+    }
+
+    .cell{
+      border: 1px solid rgba(234,240,255,.18);
+      box-sizing:border-box;
+      background: rgba(20,40,90,.22);
+      cursor: pointer;
+    }
+    .cell:active{ outline: 2px solid rgba(91,124,255,.55); outline-offset: -2px; }
+
+    .layer{
+      position:absolute;
+      left: var(--boardPad);
+      top: var(--boardPad);
+      width: calc(var(--cell) * 6);
+      height: calc(var(--cell) * 6);
+      pointer-events:none;
+    }
+
+    .block{
+      position:absolute;
+      width: var(--cell);
+      height: var(--cell);
+      border-radius: 12px;
+    }
+
+    /* talokorttelit */
+    .bldg{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.02)),
+        rgba(26,36,70,.82);
+      box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.16),
+        inset 0 0 0 5px rgba(0,0,0,.12),
+        0 14px 22px rgba(0,0,0,.34);
+      position:absolute;
+    }
+    .bldg::after{
+      content:"";
+      position:absolute;
+      inset: 10%;
+      border-radius: 9px;
+      background:
+        repeating-linear-gradient(0deg, rgba(255,235,160,.13) 0 3px, transparent 3px 10px),
+        repeating-linear-gradient(90deg, rgba(255,235,160,.10) 0 3px, transparent 3px 10px);
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.10),
+        0 0 0 1px rgba(0,0,0,.10);
+      opacity: .95;
+    }
+
+    .police{
+      background: rgba(255,255,255,.2);
+      box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.10),
+        0 10px 18px rgba(0,0,0,.22);
+    }
+
+    .car{
+      background: rgba(255,90,106,.4);
+      box-shadow:
+        inset 0 0 0 2px rgba(255,90,106,.60),
+        0 12px 20px rgba(0,0,0,.35);
+      border-radius: 14px;
+    }
+	
+    .cmark{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transform-origin: 50% 50%;
+      filter: drop-shadow(0 6px 6px rgba(0,0,0,.35));
+    }
+    .cmark svg{
+      width: 92%;
+      height: 92%;
+      display:block;
+    }
+
+    .pmark{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size: calc(var(--cell) * .54);
+      filter: drop-shadow(0 6px 6px rgba(0,0,0,.35));
+      transform-origin: 50% 50%;
+    }
+
+    /* --- poliisiauto SVG (ruudun kokoinen) --- */
+    .pmark svg{
+      width: 92%;
+      height: 92%;
+      display:block;
+    }
+    .pmark.caught .lightL{ animation: blinkBlue .22s steps(1,end) infinite; }
+    .pmark.caught .lightR{ animation: blinkRed  .22s steps(1,end) infinite; animation-delay:.11s; }
+    @keyframes blinkBlue{ 0%,100%{opacity:.25} 50%{opacity:1} }
+    @keyframes blinkRed { 0%,100%{opacity:.25} 50%{opacity:1} }
+
+
+    /* ----- palette (EI SCROLLIA) ----- */
+    #palette{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    #palHeader{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      background: rgba(14,24,55,.55);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 8px 10px;
+      border-radius: 14px;
+    }
+    #palHeader .ttl{ font-weight: 900; }
+    #palHeader .meta{ color: var(--muted); font-size: 12px; font-weight: 800; }
+
+    #pieces{
+      flex: 1 1 auto;
+      min-height: 0;
+      display:grid;
+      gap: 10px;
+      overflow: hidden;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      grid-template-rows: repeat(3, minmax(0,1fr));
+    }
+
+    @media (max-width: 430px) and (orientation: portrait){
+      :root{
+        --gap: 8px;
+        --pad: 10px;
+        --statusH: clamp(78px, 12vh, 110px);
+      }
+      header h1{ font-size: 16px; }
+      button{ padding: 10px 10px; }
+      #pieces{
+        gap: 8px;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        grid-template-rows: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    .pieceBtn{
+      text-align:left;
+      padding: 8px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      display:flex;
+      flex-direction:column;
+      gap: 8px;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .pieceBtn.sel{
+      outline: 2px solid rgba(91,124,255,.60);
+      outline-offset: 0;
+      border-color: rgba(91,124,255,.45);
+      background: rgba(91,124,255,.14);
+    }
+
+    .pieceTop{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 8px;
+      min-width: 0;
+    }
+    .pieceName{
+      font-weight: 900;
+      font-size: 13px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .pieceMeta{
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      flex: 0 0 auto;
+    }
+
+    /* preview: aina neliö (vakio), SVG 3x3 grid */
+    .mini{
+      flex: 1 1 auto;
+      min-height: 0;
+      border-radius: 12px;
+      background: rgba(0,0,0,.16);
+      border: 1px solid rgba(255,255,255,.10);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      aspect-ratio: 1 / 1;
+    }
+    .mini svg{
+      width: 92%;
+      height: 92%;
+      display:block;
+    }
+
+    footer{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      user-select:none;
+      flex-wrap:wrap;
+      overflow:hidden;
+    }
+
+    /* iOS näppäimistö-fiksi */
+    #kbdHack{
+      position: fixed;
+      left: -10000px;
+      top: -10000px;
+      opacity: 0;
+      pointer-events:none;
+    }
+
+    /* ---------- Modal (help) ---------- */
+    #modalBackdrop{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding:
+        calc(16px + var(--sat))
+        calc(16px + var(--sar))
+        calc(16px + var(--sab))
+        calc(16px + var(--sal));
+      z-index: 9999;
+    }
+    #modalBackdrop.open{ display:flex; }
+
+    #modal{
+      width: min(560px, 100%);
+      max-height: min(78vh, 720px);
+      background: rgba(16,26,58,.92);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 18px;
+      box-shadow: 0 28px 80px rgba(0,0,0,.55);
+      overflow: hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    #modalHeader{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+    #modalHeader .ttl{
+      font-weight: 950;
+      letter-spacing: .2px;
+    }
+    #modalBody{
+      padding: 12px;
+      overflow: auto; /* modalin sisällä saa scrollata, ei pelin */
+      -webkit-overflow-scrolling: touch;
+      color: rgba(234,240,255,.88);
+      line-height: 1.35;
+      font-size: 14px;
+    }
+    #modalBody ul{ margin: 8px 0 0 18px; }
+    #modalBody code{
+      background: rgba(255,255,255,.08);
+      padding: 1px 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="title">
+        <h1>RoadBlock <span id="puzTag" style="opacity:.65;font-weight:800;"></span></h1>
+        <div class="sub">6×6 • aseta 6 poliisia ja estä pako (diagonaali, ei nurkan läpi)</div>
+      </div>
+      <div class="btnbar">
+        <button class="ghost" id="btnHelp">Ohjeet</button>
+        <button class="warn" id="btnReset">Reset</button>
+        <select id="puzzleSelect" aria-label="Valitse pulma"><option>Ladataan pulmia…</option></select>
+        <button class="primary" id="btnNext">Seuraava</button>
+              </div>
+    </header>
+
+    <div class="card" id="statusCard">
+      <div id="status">
+        <div id="msg">Valitse poliisi paletista.</div>
+        <div id="hint">Klikkaa poliisia: valitse / pyöräytä 90°. Klikkaa poliisia laudalla: poista.</div>
+      </div>
+    </div>
+
+    <main>
+      <div id="boardWrap" class="card">
+        <div id="board" aria-label="pelilauta">
+          <div class="grid" id="grid"></div>
+          <div class="layer" id="layer"></div>
+        </div>
+      </div>
+
+      <aside id="palette" class="card">
+        <div id="palHeader">
+          <div class="ttl">Poliisit (6 kpl)</div>
+          <div class="meta" id="placedCount">0/6 asetettu</div>
+        </div>
+        <div id="pieces"></div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="display:none">iOS best practice: safe-area, --vh, offscreen input</div>
+      <div id="footNote">Proto v0.9</div>
+    </footer>
+  </div>
+
+  <!-- Help modal -->
+  <div id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="modal">
+      <div id="modalHeader">
+        <div class="ttl">RoadBlock – ohjeet</div>
+        <button class="ghost" id="btnCloseModal">Sulje</button>
+      </div>
+      <div id="modalBody">
+        <div style="opacity:.95;font-weight:900;margin-bottom:6px;">Tavoite</div>
+        Estä punaisen auton pako asettamalla 6 poliisia.
+        <div style="height:10px"></div>
+
+        <div style="opacity:.95;font-weight:900;margin-bottom:6px;">Paletti</div>
+        <ul>
+          <li>Klikkaa poliisia: <b>valitse</b></li>
+          <li>Klikkaa valitun poliisin previewtä: <b>pyöräytä 90°</b></li>
+          <li>Klikkaa valitun poliisin otsikkoa (✅): <b>poista asetettu poliisi</b></li>
+        </ul>
+
+        <div style="height:10px"></div>
+        <div style="opacity:.95;font-weight:900;margin-bottom:6px;">Pelilauta</div>
+        <ul>
+          <li>Klikkaa tyhjää ruutua: aseta valittu poliisi niin että <code>p</code> osuu klikattuun ruutuun</li>
+          <li>Klikkaa poliisia (mikä tahansa sen ruutu): <b>poista</b></li>
+        </ul>
+
+        <div style="height:10px"></div>
+        <div style="opacity:.95;font-weight:900;margin-bottom:6px;">Punainen auto</div>
+        Auto ei voi ajaa diagonaalisesti tai rakennusten läpi.
+      </div>
+    </div>
+  </div>
+
+  <input id="kbdHack" inputmode="none" autocomplete="off" />
+
+<script>
+(() => {
+  /* ---------------- iOS best-practice viewport ---------------- */
+  function setVH(){
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+  window.addEventListener("resize", setVH, {passive:true});
+  window.addEventListener("orientationchange", setVH, {passive:true});
+  setVH();
+
+  function isIOS(){
+    const p = navigator.platform || "";
+    const ua = navigator.userAgent || "";
+    const macTouch = (p === "MacIntel" && navigator.maxTouchPoints > 1);
+    return /iPhone|iPad|iPod/.test(ua) || macTouch;
+  }
+  function focusHack(){
+    if(!isIOS()) return;
+    const el = document.getElementById("kbdHack");
+    if(!el) return;
+    try{ el.focus({preventScroll:true}); }catch(e){ try{ el.focus(); }catch(_){} }
+  }
+  document.addEventListener("pointerdown", focusHack, {passive:true});
+
+  /* ---------------- Modal helpers ---------------- */
+  const elBackdrop = document.getElementById("modalBackdrop");
+  const elModal = document.getElementById("modal");
+  const btnCloseModal = document.getElementById("btnCloseModal");
+
+  function openModal(){
+    elBackdrop.classList.add("open");
+    elBackdrop.setAttribute("aria-hidden","false");
+  }
+  function closeModal(){
+    elBackdrop.classList.remove("open");
+    elBackdrop.setAttribute("aria-hidden","true");
+  }
+  document.getElementById("btnHelp").addEventListener("click", openModal);
+  btnCloseModal.addEventListener("click", closeModal);
+  elBackdrop.addEventListener("click", (ev)=>{ if(ev.target === elBackdrop) closeModal(); });
+  document.addEventListener("keydown", (ev)=>{ if(ev.key === "Escape") closeModal(); });
+
+  /* ---------------- Data: shapes ---------------- */
+  const BUILDINGS = [
+    { id:"b1", name:"Rakennus 1", shape:["xx","x-"] },
+    { id:"b2", name:"Rakennus 2", shape:["xxx","--x"] },
+    { id:"b3", name:"Rakennus 3", shape:["xxx","x--"] },
+    { id:"b4", name:"Rakennus 4", shape:["xxx"] },
+  ];
+
+  const POLICE = [
+    { id:"p1", name:"Poliisi 1", shape:["xp","x-"] },
+    { id:"p2", name:"Poliisi 2", shape:["xp","-x"] },
+    { id:"p3", name:"Poliisi 3", shape:["xxp","--x"] },
+    { id:"p4", name:"Poliisi 4", shape:["xxp","x--"] },
+    { id:"p5", name:"Poliisi 5", shape:["xxx","-p-"] },
+    { id:"p6", name:"Poliisi 6", shape:["xpx"] },
+  ];
+
+  /* ---------------- Puzzles ---------------- */
+  // Fallback puzzle (used only if roadblock_puzzles.json cannot be loaded)
+  const FALLBACK_PUZZLES = [{
+    name: "pulma 21",
+    car: { x: 2, y: 1, rot: 0 },
+    buildings: [
+      { bid:"b4", x: 0, y: 0, rot: 0 },
+      { bid:"b2", x: 1, y: 2, rot: 3 },
+      { bid:"b3", x: 3, y: 2, rot: 1 },
+      { bid:"b1", x: 3, y: 4, rot: 3 },
+    ]
+  }];
+
+  const LS_PUZ = "roadblock_last_puzzle_idx_v1";
+  let PUZZLES = [];
+  let curIdx = 0;
+  let curPuzzle = null;
+
+  function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
+
+  function normalizePuzzle(pz){
+    // minimal sanitization
+    const name = String(pz?.name ?? "");
+    const car = { x: +pz?.car?.x, y: +pz?.car?.y, rot: (+pz?.car?.rot)||0 };
+    const buildings = Array.isArray(pz?.buildings) ? pz.buildings.map(bb=>({
+      bid: String(bb.bid),
+      x: +bb.x, y: +bb.y, rot: (+bb.rot)||0
+    })) : [];
+    return { name, car, buildings };
+  }
+
+  async function loadPuzzlesAuto(){
+    // Try to load from same folder: roadblock_puzzles.json
+    try{
+      const res = await fetch("roadblock_puzzles.json", {cache:"no-store"});
+      if(!res.ok) throw new Error("http");
+      const data = await res.json();
+      if(!Array.isArray(data) || !data.length) throw new Error("badjson");
+      PUZZLES = data.map(normalizePuzzle).filter(pz =>
+        Number.isFinite(pz.car.x) && Number.isFinite(pz.car.y) &&
+        Array.isArray(pz.buildings) && pz.buildings.length === 4
+      );
+      if(!PUZZLES.length) throw new Error("empty");
+      setMsg(`Pulmat ladattu: ${PUZZLES.length} kpl.`, "");
+    }catch(e){
+      PUZZLES = FALLBACK_PUZZLES;
+      setMsg("Pulmatiedostoa ei löytynyt: käytetään varapulmaa.", "bad");
+    }
+
+    // restore last index
+    try{
+      const v = localStorage.getItem(LS_PUZ);
+      if(v!=null){
+        const n = parseInt(v, 10);
+        if(Number.isFinite(n)) curIdx = clamp(n, 0, PUZZLES.length-1);
+      }
+    }catch(_){}
+
+    buildPuzzleSelect();
+    loadPuzzle(curIdx);
+  }
+
+  function saveLastIdx(){
+    try{ localStorage.setItem(LS_PUZ, String(curIdx)); }catch(_){}
+  }
+
+  function labelFor(idx){
+    const pz = PUZZLES[idx];
+    const base = pz?.name ? pz.name : `pulma ${idx+1}`;
+    return `${idx+1}. ${base}`;
+  }
+
+  function buildPuzzleSelect(){
+    const sel = document.getElementById("puzzleSelect");
+    sel.innerHTML = "";
+    for(let i=0;i<PUZZLES.length;i++){
+      const opt = document.createElement("option");
+      opt.value = String(i);
+      opt.textContent = labelFor(i);
+      sel.appendChild(opt);
+    }
+    sel.value = String(curIdx);
+
+    sel.addEventListener("change", ()=>{
+      if(sel.value === "__gen__") return;
+      const i = clamp(parseInt(sel.value,10)||0, 0, PUZZLES.length-1);
+      loadPuzzle(i);
+    });
+
+    const btnNext = document.getElementById("btnNext");
+    btnNext.addEventListener("click", ()=>{
+      const i = (curIdx + 1) % PUZZLES.length;
+      loadPuzzle(i);
+    });
+
+
+  }
+
+  function loadPuzzle(idx){
+    curIdx = clamp(idx, 0, PUZZLES.length-1);
+    curPuzzle = PUZZLES[curIdx];
+    saveLastIdx();
+
+    // update header tag
+    const tag = document.getElementById("puzTag");
+    if(tag){
+      tag.textContent = `(#${curIdx+1})`;
+    }
+    const h1 = document.querySelector("header h1");
+    const spanName = curPuzzle?.name ? ` – ${curPuzzle.name}` : "";
+    const sub = document.querySelector("header .sub");
+    if(sub){
+      sub.textContent = `6×6 • valitse pulma: ${curIdx+1}/${PUZZLES.length}${spanName}`;
+    }
+
+    // reset police placements
+    for(const p of POLICE){
+      G.placed[p.id] = null;
+      G.policeRot[p.id] = 0;
+    }
+    G.selectedPoliceId = null;
+    updateCaughtState();
+
+    // update select value (if called from Next)
+    const sel = document.getElementById("puzzleSelect");
+    if(sel) sel.value = String(curIdx);
+
+    setMsg(`Pulma ladattu: ${labelFor(curIdx)}`, "");
+    setHint("Valitse poliisi paletista. Klikkaa poliisia: valitse / pyöräytä 90°. Klikkaa poliisia laudalla: poista.");
+    renderPalette();
+    renderAll();
+  }
+/* ---------------- Helpers: rotate shapes ---------------- */
+  function rotateShape(shape){
+    const h = shape.length;
+    const w = shape[0].length;
+    const grid = shape.map(r => r.split(""));
+    const out = [];
+    for(let x=0; x<w; x++){
+      let row = "";
+      for(let y=h-1; y>=0; y--){
+        row += grid[y][x];
+      }
+      out.push(row);
+    }
+    return out;
+  }
+  function rotShape(shape, rot){
+    let s = shape;
+    for(let i=0;i<rot;i++) s = rotateShape(s);
+    return s;
+  }
+  function shapeCells(shape){
+    const cells = [];
+    for(let y=0;y<shape.length;y++){
+      for(let x=0;x<shape[0].length;x++){
+        const ch = shape[y][x];
+        if(ch === "x" || ch === "p") cells.push({x,y,ch});
+      }
+    }
+    return cells;
+  }
+  function findP(shape){
+    for(let y=0;y<shape.length;y++){
+      for(let x=0;x<shape[0].length;x++){
+        if(shape[y][x] === "p") return {x,y};
+      }
+    }
+    return null;
+  }
+
+  /* ---------------- sizing: no-scroll layout fit ---------------- */
+  function rebuildCellSize(){
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    const gap = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gap")) || 10;
+    const pad = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--pad")) || 12;
+
+    const headerH = document.querySelector("header")?.getBoundingClientRect().height || 0;
+    const statusH = document.getElementById("statusCard")?.getBoundingClientRect().height || 0;
+    const footerH = document.querySelector("footer")?.getBoundingClientRect().height || 0;
+
+    const chrome = headerH + statusH + footerH + gap*2 + pad*2;
+    const availMainH = Math.max(240, vh - chrome);
+
+    const isWide = window.matchMedia("(min-width: 900px) and (orientation: landscape)").matches;
+
+    const boardPad = 10;
+
+    let boardMaxByW;
+    let boardMaxByH;
+
+    if(isWide){
+      const palW = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--palW")) || 340;
+      boardMaxByW = Math.max(240, vw - palW - pad*2 - gap - 24);
+      boardMaxByH = Math.max(240, availMainH - 24);
+    }else{
+      const palShare = 0.42;
+      boardMaxByH = Math.max(220, (availMainH * (1 - palShare)) - 24);
+      boardMaxByW = Math.max(240, vw - pad*2 - 24);
+    }
+
+    const boardMax = Math.min(boardMaxByW, boardMaxByH);
+
+    let cell = Math.floor((boardMax - 2*boardPad) / 6);
+    cell = Math.max(34, Math.min(76, cell));
+
+    const boardOuter = (cell * 6 + boardPad * 2);
+
+    document.documentElement.style.setProperty("--cell", cell + "px");
+    document.documentElement.style.setProperty("--boardOuter", boardOuter + "px");
+  }
+  window.addEventListener("resize", rebuildCellSize, {passive:true});
+  window.addEventListener("orientationchange", rebuildCellSize, {passive:true});
+
+  /* ---------------- Game state ---------------- */
+  const W = 6, H = 6;
+  const G = {
+    selectedPoliceId: null,
+    policeRot: Object.fromEntries(POLICE.map(p => [p.id, 0])),
+    placed: Object.fromEntries(POLICE.map(p => [p.id, null])),
+    redCaught: false,
+  };
+
+let policeBlinkInterval = null; // <-- LISÄÄ TÄMÄ
+  /* ---------------- UI refs ---------------- */
+  const elGrid = document.getElementById("grid");
+  const elLayer = document.getElementById("layer");
+  const elMsg = document.getElementById("msg");
+  const elHint = document.getElementById("hint");
+  const elPlacedCount = document.getElementById("placedCount");
+  const elPieces = document.getElementById("pieces");
+
+  for(let y=0;y<H;y++){
+    for(let x=0;x<W;x++){
+      const d = document.createElement("div");
+      d.className = "cell";
+      d.addEventListener("click", () => onCellClick(x,y));
+      elGrid.appendChild(d);
+    }
+  }
+
+  function setMsg(text, kind){
+    elMsg.textContent = text;
+    elMsg.className = kind ? kind : "";
+  }
+  function setHint(text){
+    elHint.textContent = text;
+  }
+
+  function updateCaughtState(){
+    // "Jää kiinni" = punaisella ei ole pakoreittiä (kun kaikki 6 poliisia on asetettu)
+    const allPlaced = Object.values(G.placed).every(v => v);
+    if(!curPuzzle || !allPlaced){
+      G.redCaught = false;
+      return;
+    }
+    G.redCaught = !carCanEscape();
+  }
+
+  /* ---------------- Occupancy ---------------- */
+  function emptyOcc(){
+    return Array.from({length:H}, () => Array.from({length:W}, () => null));
+  }
+  function stampShape(occ, shape, ox, oy, tag){
+    for(const c of shapeCells(shape)){
+      occ[oy + c.y][ox + c.x] = tag;
+    }
+  }
+  function canPlace(occ, shape, ox, oy){
+    for(const c of shapeCells(shape)){
+      const x = ox + c.x;
+      const y = oy + c.y;
+      if(x < 0 || x >= W || y < 0 || y >= H) return false;
+      if(occ[y][x]) return false;
+    }
+    return true;
+  }
+  function buildOcc(){
+    if(!curPuzzle) return emptyOcc();
+
+    const occ = emptyOcc();
+
+    for(const bpl of curPuzzle.buildings){
+      const def = BUILDINGS.find(bb => bb.id === bpl.bid);
+      const shape = rotShape(def.shape, bpl.rot || 0);
+      stampShape(occ, shape, bpl.x, bpl.y, "b");
+    }
+
+    occ[curPuzzle.car.y][curPuzzle.car.x] = "car";
+
+    for(const p of POLICE){
+      const pl = G.placed[p.id];
+      if(!pl) continue;
+      const s = rotShape(p.shape, pl.rot);
+      const p0 = findP(s);
+      const ox = pl.x - p0.x;
+      const oy = pl.y - p0.y;
+      stampShape(occ, s, ox, oy, p.id);
+    }
+
+    return occ;
+  }
+
+
+  // Escape analysis should block ONLY buildings + police cars ('p'), not whole police tiles.
+  function stampOnlyP(occ, shape, ox, oy, tag){
+    for(const c of shapeCells(shape)){
+      if(c.ch !== "p") continue;
+      occ[oy + c.y][ox + c.x] = tag;
+    }
+  }
+
+  function buildOccEscape(){
+    if(!curPuzzle) return emptyOcc();
+
+    const occ = emptyOcc();
+
+    // Buildings block all their occupied squares
+    for(const bpl of curPuzzle.buildings){
+      const def = BUILDINGS.find(bb => bb.id === bpl.bid);
+      const shape = rotShape(def.shape, bpl.rot || 0);
+      stampShape(occ, shape, bpl.x, bpl.y, "b");
+    }
+
+    // Car position (not blocking itself)
+    occ[curPuzzle.car.y][curPuzzle.car.x] = "car";
+
+    // Police: block ONLY the police car square ('p')
+    for(const p of POLICE){
+      const pl = G.placed[p.id];
+      if(!pl) continue;
+      const s = rotShape(p.shape, pl.rot);
+      const p0 = findP(s);
+      const ox = pl.x - p0.x;
+      const oy = pl.y - p0.y;
+      stampOnlyP(occ, s, ox, oy, p.id);
+    }
+
+    return occ;
+  }
+
+  /* ---------------- Remove police helpers ---------------- */
+  function removePolice(pid){
+    if(!G.placed[pid]) return false;
+    G.placed[pid] = null;
+    setMsg(`${POLICE.find(p=>p.id===pid).name} poistettu.`, "ok");
+    return true;
+  }
+  function policeAtCell(x,y){
+    const occ = buildOcc();
+    const v = occ[y][x];
+    if(!v) return null;
+    if(v === "b" || v === "car") return null;
+    return (typeof v === "string" && v.startsWith("p")) ? v : null;
+  }
+
+  /* ---------------- SVG preview (vakio 3x3) ---------------- */
+  const PREVIEW_DIM = 3;
+
+
+  function makePoliceIconGroup(svgNS){
+    const g = document.createElementNS(svgNS, "g");
+
+    const body = document.createElementNS(svgNS, "rect");
+    body.setAttribute("x","28"); body.setAttribute("y","12");
+    body.setAttribute("width","44"); body.setAttribute("height","76");
+    body.setAttribute("rx","14");
+    body.setAttribute("fill","#fff");
+    body.setAttribute("stroke","#111");
+    body.setAttribute("stroke-width","4");
+    g.appendChild(body);
+
+    const win = document.createElementNS(svgNS, "rect");
+    win.setAttribute("x","36"); win.setAttribute("y","26");
+    win.setAttribute("width","28"); win.setAttribute("height","32");
+    win.setAttribute("rx","8");
+    win.setAttribute("fill","#bfe1ff");
+    win.setAttribute("stroke","#111");
+    win.setAttribute("stroke-width","3");
+    g.appendChild(win);
+
+    const stripe = document.createElementNS(svgNS, "rect");
+    stripe.setAttribute("x","30"); stripe.setAttribute("y","56");
+    stripe.setAttribute("width","40"); stripe.setAttribute("height","10");
+    stripe.setAttribute("rx","5");
+    stripe.setAttribute("fill","#111");
+    g.appendChild(stripe);
+
+    const bar = document.createElementNS(svgNS, "rect");
+    bar.setAttribute("x","33"); bar.setAttribute("y","16");
+    bar.setAttribute("width","34"); bar.setAttribute("height","10");
+    bar.setAttribute("rx","5");
+    bar.setAttribute("fill","#111");
+    g.appendChild(bar);
+
+    const l = document.createElementNS(svgNS, "rect");
+    l.setAttribute("class","lightL");
+    l.setAttribute("x","35"); l.setAttribute("y","18");
+    l.setAttribute("width","14"); l.setAttribute("height","6");
+    l.setAttribute("rx","3");
+    l.setAttribute("fill","#2a6bff");
+    l.setAttribute("opacity",".25");
+    g.appendChild(l);
+
+    const r = document.createElementNS(svgNS, "rect");
+    r.setAttribute("class","lightR");
+    r.setAttribute("x","51"); r.setAttribute("y","18");
+    r.setAttribute("width","14"); r.setAttribute("height","6");
+    r.setAttribute("rx","3");
+    r.setAttribute("fill","#ff2a4b");
+    r.setAttribute("opacity",".25");
+    g.appendChild(r);
+
+    return g;
+  }
+
+  function makePoliceIconSVG(){
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "0 0 100 100");
+    svg.setAttribute("aria-hidden","true");
+    svg.appendChild(makePoliceIconGroup(svgNS));
+    return svg;
+  }
+
+  
+  function makeRedSportsCarSVG(){
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "0 0 100 100");
+    svg.setAttribute("aria-hidden","true");
+
+    // shadow
+    const sh = document.createElementNS(svgNS, "ellipse");
+    sh.setAttribute("cx","50"); sh.setAttribute("cy","56");
+    sh.setAttribute("rx","26"); sh.setAttribute("ry","34");
+    sh.setAttribute("fill","#000"); sh.setAttribute("opacity","0.10");
+    svg.appendChild(sh);
+
+    // body (red)
+    const body = document.createElementNS(svgNS, "path");
+    body.setAttribute("d",
+      "M50 10 " +
+      "C66 10 74 20 77 30 " +
+      "C82 45 82 55 77 70 " +
+      "C74 80 66 90 50 90 " +
+      "C34 90 26 80 23 70 " +
+      "C18 55 18 45 23 30 " +
+      "C26 20 34 10 50 10 Z"
+    );
+    body.setAttribute("fill","#e0182d");
+    body.setAttribute("stroke","#111");
+    body.setAttribute("stroke-width","4");
+    body.setAttribute("stroke-linejoin","round");
+    svg.appendChild(body);
+
+    // cockpit hole
+    const cockpit = document.createElementNS(svgNS, "path");
+    cockpit.setAttribute("d",
+      "M35 36 C38 28 44 24 50 24 " +
+      "C56 24 62 28 65 36 " +
+      "C67 41 67 47 65 52 " +
+      "C62 60 56 64 50 64 " +
+      "C44 64 38 60 35 52 " +
+      "C33 47 33 41 35 36 Z"
+    );
+    cockpit.setAttribute("fill","#0e1a2b");
+    cockpit.setAttribute("opacity","0.95");
+    svg.appendChild(cockpit);
+
+    // windshield
+    const glass = document.createElementNS(svgNS, "path");
+    glass.setAttribute("d",
+      "M38 34 C42 29 46 27 50 27 " +
+      "C54 27 58 29 62 34 " +
+      "L60 38 C57 34 54 32 50 32 " +
+      "C46 32 43 34 40 38 Z"
+    );
+    glass.setAttribute("fill","#bfe1ff");
+    glass.setAttribute("opacity","0.85");
+    svg.appendChild(glass);
+
+    // roll hoop
+    const hoop = document.createElementNS(svgNS, "path");
+    hoop.setAttribute("d","M37 55 C41 63 45 67 50 67 C55 67 59 63 63 55");
+    hoop.setAttribute("fill","none");
+    hoop.setAttribute("stroke","#ffffff");
+    hoop.setAttribute("stroke-width","3");
+    hoop.setAttribute("opacity","0.9");
+    svg.appendChild(hoop);
+
+    // headlights
+    const hL = document.createElementNS(svgNS, "rect");
+    hL.setAttribute("x","30"); hL.setAttribute("y","14");
+    hL.setAttribute("width","14"); hL.setAttribute("height","8");
+    hL.setAttribute("rx","4");
+    hL.setAttribute("fill","#ffeaa0");
+    hL.setAttribute("opacity","0.95");
+    svg.appendChild(hL);
+
+    const hR = document.createElementNS(svgNS, "rect");
+    hR.setAttribute("x","56"); hR.setAttribute("y","14");
+    hR.setAttribute("width","14"); hR.setAttribute("height","8");
+    hR.setAttribute("rx","4");
+    hR.setAttribute("fill","#ffeaa0");
+    hR.setAttribute("opacity","0.95");
+    svg.appendChild(hR);
+
+    // tail lights
+    const tL = document.createElementNS(svgNS, "rect");
+    tL.setAttribute("x","30"); tL.setAttribute("y","78");
+    tL.setAttribute("width","14"); tL.setAttribute("height","8");
+    tL.setAttribute("rx","4");
+    tL.setAttribute("fill","#ff5a6a");
+    tL.setAttribute("opacity","0.85");
+    svg.appendChild(tL);
+
+    const tR = document.createElementNS(svgNS, "rect");
+    tR.setAttribute("x","56"); tR.setAttribute("y","78");
+    tR.setAttribute("width","14"); tR.setAttribute("height","8");
+    tR.setAttribute("rx","4");
+    tR.setAttribute("fill","#ff5a6a");
+    tR.setAttribute("opacity","0.85");
+    svg.appendChild(tR);
+
+    // wheels (big & readable)
+    const wheels = [
+      ["20","26"], ["72","26"],
+      ["20","62"], ["72","62"],
+    ];
+    for (const [x,y] of wheels){
+      const w = document.createElementNS(svgNS, "rect");
+      w.setAttribute("x", x); w.setAttribute("y", y);
+      w.setAttribute("width","8"); w.setAttribute("height","18");
+      w.setAttribute("rx","4");
+      w.setAttribute("fill","#111");
+      svg.appendChild(w);
+    }
+
+    return svg;
+  }
+
+function makePreviewSVG(shape){
+    const rows = shape.length;
+    const cols = shape[0].length;
+
+    const offX = (PREVIEW_DIM - cols) / 2;
+    const offY = (PREVIEW_DIM - rows) / 2;
+
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", `0 0 ${PREVIEW_DIM} ${PREVIEW_DIM}`);
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+    for(let y=0;y<PREVIEW_DIM;y++){
+      for(let x=0;x<PREVIEW_DIM;x++){
+        const bg = document.createElementNS(svgNS, "rect");
+        bg.setAttribute("x", String(x + 0.06));
+        bg.setAttribute("y", String(y + 0.06));
+        bg.setAttribute("width", "0.88");
+        bg.setAttribute("height","0.88");
+        bg.setAttribute("rx","0.18");
+        bg.setAttribute("fill","rgba(255,255,255,0.03)");
+        bg.setAttribute("stroke","rgba(255,255,255,0.06)");
+        bg.setAttribute("stroke-width","0.04");
+        svg.appendChild(bg);
+      }
+    }
+
+    for(let y=0;y<rows;y++){
+      for(let x=0;x<cols;x++){
+        const ch = shape[y][x];
+        if(ch === "-") continue;
+
+        const xx = x + offX;
+        const yy = y + offY;
+
+        const r = document.createElementNS(svgNS, "rect");
+        r.setAttribute("x", String(xx + 0.10));
+        r.setAttribute("y", String(yy + 0.10));
+        r.setAttribute("width", "0.80");
+        r.setAttribute("height","0.80");
+        r.setAttribute("rx","0.18");
+
+        if(ch === "p"){
+          r.setAttribute("fill", "rgba(255,255,255,0.13)");
+          r.setAttribute("stroke", "rgba(255,255,255,0.24)");
+          r.setAttribute("stroke-width", "0.06");
+          svg.appendChild(r);
+
+          const g = makePoliceIconGroup(svgNS);
+          // Sovitus 1×1 preview-ruutuun (0..3 koordinaatisto)
+          g.setAttribute("transform", `translate(${xx + 0.12} ${yy + 0.10}) scale(0.0076)`);
+          svg.appendChild(g);
+        }else{
+          r.setAttribute("fill", "rgba(255,255,255,0.09)");
+          r.setAttribute("stroke", "rgba(255,255,255,0.16)");
+          r.setAttribute("stroke-width", "0.06");
+          svg.appendChild(r);
+        }
+      }
+    }
+
+    return svg;
+  }
+
+  /* ---------------- Palette render ---------------- */
+  function renderPalette(){
+    elPieces.innerHTML = "";
+
+    for(const p of POLICE){
+      const rot = G.policeRot[p.id] || 0;
+      const s = rotShape(p.shape, rot);
+      const placed = !!G.placed[p.id];
+
+      const btn = document.createElement("button");
+      btn.className = "pieceBtn" + (G.selectedPoliceId === p.id ? " sel" : "");
+      btn.dataset.pid = p.id;
+
+      const top = document.createElement("div");
+      top.className = "pieceTop";
+      top.innerHTML = `
+        <div class="pieceName">${p.name} ${placed ? "✅" : ""}</div>
+        <div class="pieceMeta">rot ${rot*90}°</div>
+      `;
+
+      const mini = document.createElement("div");
+      mini.className = "mini";
+      mini.appendChild(makePreviewSVG(s));
+
+      btn.appendChild(top);
+      btn.appendChild(mini);
+
+      btn.addEventListener("click", (ev) => {
+        const pid = p.id;
+        const isMini = !!(ev.target.closest && ev.target.closest(".mini"));
+        const isSelected = (G.selectedPoliceId === pid);
+
+        if(!isSelected){
+          G.selectedPoliceId = pid;
+          setMsg(`Valittu: ${p.name}.`, "");
+          setHint("Klikkaa previewtä: pyöräytä 90°. Klikkaa otsikkoa (✅): poista. Klikkaa laudalla poliisia: poista.");
+          renderPalette();
+          renderAll();
+          return;
+        }
+
+        if(isMini){
+          G.policeRot[pid] = (G.policeRot[pid] + 1) % 4;
+          setMsg(`${p.name} pyöräytetty.`, "");
+          renderPalette();
+          renderAll();
+          return;
+        }
+
+        if(placed){
+          removePolice(pid);
+          updateCaughtState();
+          renderPalette();
+          renderAll();
+        }
+      });
+
+      elPieces.appendChild(btn);
+    }
+
+    const nPlaced = Object.values(G.placed).filter(v => v).length;
+    elPlacedCount.textContent = `${nPlaced}/6 asetettu`;
+  }
+
+  /* ---------------- Rendering ---------------- */
+  function clearLayer(){ elLayer.innerHTML = ""; }
+
+  function addBlock(x,y,cls,inner){
+    const d = document.createElement("div");
+    d.className = "block " + cls;
+    d.style.left = `calc(var(--cell) * ${x})`;
+    d.style.top  = `calc(var(--cell) * ${y})`;
+    if(inner) d.appendChild(inner);
+    elLayer.appendChild(d);
+  }
+
+  function renderAll(){
+    if(!curPuzzle){ return; }
+    clearLayer();
+
+for(const bpl of curPuzzle.buildings){
+      const def = BUILDINGS.find(bb => bb.id === bpl.bid);
+      const s = rotShape(def.shape, bpl.rot || 0);
+      for(const c of shapeCells(s)){
+        addBlock(bpl.x + c.x, bpl.y + c.y, "bldg");
+      }
+    }
+
+    for(const p of POLICE){
+      const pl = G.placed[p.id];
+      if(!pl) continue;
+
+      const s = rotShape(p.shape, pl.rot);
+      const p0 = findP(s);
+      const ox = pl.x - p0.x;
+      const oy = pl.y - p0.y;
+
+      for(const c of shapeCells(s)){
+        const inner = (c.ch === "p") ? (() => {
+          const m = document.createElement("div");
+          m.className = "pmark";
+          m.textContent = "";
+          m.appendChild(makePoliceIconSVG());
+          m.style.transform = `rotate(${pl.rot * 90}deg)`;  // <-- poliisiauto rotatoituu
+          return m;
+        })() : null;
+        addBlock(ox + c.x, oy + c.y, "police", inner);
+      }
+    }
+
+    const carInner = (()=>{
+      const m = document.createElement("div");
+      m.className = "cmark";
+      m.appendChild(makeRedSportsCarSVG());
+      const rot = (curPuzzle.car.rot || 0);
+      m.style.transform = `rotate(${rot * 90 - 45}deg)`;
+      return m;
+    })();
+    addBlock(curPuzzle.car.x, curPuzzle.car.y, "car", carInner);
+  }
+
+  /* ---------------- Placement logic ---------------- */
+  function onCellClick(x,y){
+    const pidOnCell = policeAtCell(x,y);
+    if(pidOnCell){
+      removePolice(pidOnCell);
+      updateCaughtState();
+      renderPalette();
+      renderAll();
+      return;
+    }
+
+    if(!G.selectedPoliceId){
+      setMsg("Valitse ensin poliisi paletista.", "");
+      return;
+    }
+
+    const pid = G.selectedPoliceId;
+    const pdef = POLICE.find(pp => pp.id === pid);
+    const rot = G.policeRot[pid] || 0;
+    const s = rotShape(pdef.shape, rot);
+    const p0 = findP(s);
+    const ox = x - p0.x;
+    const oy = y - p0.y;
+
+    const saved = G.placed[pid];
+    G.placed[pid] = null;
+    const occ2 = buildOcc();
+    G.placed[pid] = saved;
+
+    if(!canPlace(occ2, s, ox, oy)){
+      setMsg("Ei mahdu tuohon (reuna / päällekkäisyys).", "bad");
+      return;
+    }
+
+    G.placed[pid] = { x, y, rot };
+    updateCaughtState();
+    setMsg(`${pdef.name} asetettu.`, "ok");
+    renderPalette();
+    renderAll();
+
+if(Object.values(G.placed).every(v => v)){
+  const ok = G.redCaught;
+
+  setMsg(
+    ok
+      ? "Ratkaistu: punainen auto ei pääse pakoon."
+      : "Ei vielä: punaisella autolla on pakoreitti.",
+    ok ? "ok" : "bad"
+  );
+
+  if(ok){
+    startPoliceBlinking();
+  } else {
+    stopPoliceBlinking();
+  }
+
+} else {
+  stopPoliceBlinking(); // jos poliiseja ei vielä kaikki asetettu
+}
+  }
+
+
+
+function startPoliceBlinking(){
+  stopPoliceBlinking(); // varmistus ettei tuplaintervalia
+
+  policeBlinkInterval = setInterval(()=>{
+    document.querySelectorAll(".pmark svg").forEach(svg=>{
+      const l = svg.querySelector(".lightL");
+      const r = svg.querySelector(".lightR");
+      if(!l || !r) return;
+
+      const on = l.style.opacity !== "1";
+
+      l.style.opacity = on ? "1" : "0.25";
+      r.style.opacity = on ? "0.25" : "1";
+    });
+  }, 180);
+}
+
+function stopPoliceBlinking(){
+  if(policeBlinkInterval){
+    clearInterval(policeBlinkInterval);
+    policeBlinkInterval = null;
+  }
+
+  // palauta normaalit himmeät valot
+  document.querySelectorAll(".pmark svg").forEach(svg=>{
+    const l = svg.querySelector(".lightL");
+    const r = svg.querySelector(".lightR");
+    if(l) l.style.opacity = "0.25";
+    if(r) r.style.opacity = "0.25";
+  });
+}
+
+  /* ---------------- Escape check: diagonal (no corner-cut) + orthogonal ---------------- */
+  function carCanEscape(){
+    if(!curPuzzle) return false;
+
+    const occ = buildOccEscape();
+    const start = {x: curPuzzle.car.x, y: curPuzzle.car.y};
+
+    const diagDirs = [
+      {dx: 1, dy: 1},
+      {dx: 1, dy:-1},
+      {dx:-1, dy: 1},
+      {dx:-1, dy:-1}
+    ];
+    const orthoDirs = [
+      {dx: 1, dy: 0},
+      {dx:-1, dy: 0},
+      {dx: 0, dy: 1},
+      {dx: 0, dy:-1}
+    ];
+    const allDirs = [...diagDirs, ...orthoDirs];
+
+    function inside(x,y){ return x>=0 && x<W && y>=0 && y<H; }
+    function isBlocked(x,y){
+      const v = occ[y][x];
+      if(!v) return false;
+      if(v === "car") return false;
+      return true;
+    }
+    function canStepOutsideFrom(x,y){
+      for(const d of allDirs){
+        const nx = x + d.dx, ny = y + d.dy;
+        if(!inside(nx,ny)) return true;
+      }
+      return false;
+    }
+
+    const q = [start];
+    const seen = new Set([start.x + "," + start.y]);
+
+    while(q.length){
+      const cur = q.shift();
+      if(canStepOutsideFrom(cur.x, cur.y)) return true;
+
+      for(const d of allDirs){
+        const nx = cur.x + d.dx;
+        const ny = cur.y + d.dy;
+        if(!inside(nx,ny)) continue;
+        if(isBlocked(nx,ny)) continue;
+
+        // Diagonaalisille: no corner-cut
+        if(d.dx !== 0 && d.dy !== 0){
+          const side1x = cur.x + d.dx, side1y = cur.y;
+          const side2x = cur.x,       side2y = cur.y + d.dy;
+          if(isBlocked(side1x, side1y) && isBlocked(side2x, side2y)) continue;
+        }
+
+        const k = nx + "," + ny;
+        if(seen.has(k)) continue;
+        seen.add(k);
+        q.push({x:nx,y:ny});
+      }
+    }
+    return false;
+  }
+
+function registerServiceWorker(){
+  if ("serviceWorker" in navigator){
+    navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch(()=>{});
+  }
+}
+
+  /* ---------------- Buttons ---------------- */
+  document.getElementById("btnReset").addEventListener("click", () => {
+    if(!curPuzzle){ return; }
+    for(const p of POLICE){
+      G.placed[p.id] = null;
+      G.policeRot[p.id] = 0;
+    }
+    G.selectedPoliceId = null;
+    updateCaughtState();
+    setMsg("Reset. Valitse poliisi paletista.", "");
+    setHint("Klikkaa poliisia: valitse / pyöräytä 90°. Klikkaa poliisia laudalla: poista.");
+    renderPalette();
+    renderAll();
+  });
+      /* ---------------- init ---------------- */
+  rebuildCellSize();
+  renderPalette(); // palette exists even before puzzle load
+  loadPuzzlesAuto();
+  registerServiceWorker();
+})();
+</script>
+</body>
+</html>
