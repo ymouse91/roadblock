@@ -1,243 +1,5 @@
 [
   {
-    "name": "pulma 1",
-    "car": {
-      "x": 2,
-      "y": 1,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 3,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 1,
-        "y": 2,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 2,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 2",
-    "car": {
-      "x": 4,
-      "y": 2,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 3,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 3,
-        "rot": 0
-      },
-      {
-        "bid": "b4",
-        "x": 1,
-        "y": 4,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 3",
-    "car": {
-      "x": 3,
-      "y": 4,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 2,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 4,
-        "y": 0,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 4",
-    "car": {
-      "x": 4,
-      "y": 4,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 3,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 1,
-        "y": 1,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 5",
-    "car": {
-      "x": 2,
-      "y": 4,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 1,
-        "y": 2,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 1,
-        "y": 1,
-        "rot": 0
-      },
-      {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 6",
-    "car": {
-      "x": 3,
-      "y": 1,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 2,
-        "y": 2,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 7",
-    "car": {
-      "x": 3,
-      "y": 4,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 1,
-        "y": 2,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 3,
-        "y": 1,
-        "rot": 1
-      },
-      {
-        "bid": "b3",
-        "x": 2,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 3,
-        "y": 5,
-        "rot": 2
-      }
-    ]
-  },
-  {
     "name": "pulma 8",
     "car": {
       "x": 2,
@@ -269,245 +31,33 @@
         "y": 0,
         "rot": 2
       }
-    ]
-  },
-  {
-    "name": "pulma 9",
-    "car": {
-      "x": 4,
-      "y": 2,
-      "rot": 3
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 1,
+        "postBlockCarReach": 3,
+        "firstLockReachMin": 3,
+        "forcedSteps": 5,
+        "forcedPCellCount1": 3,
+        "forcedPMinCount": 1,
+        "totalPlacements": 78,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 159.6964955922213,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
     },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 2,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      }
-    ]
-  },
-  {
-    "name": "pulma 10",
-    "car": {
-      "x": 3,
-      "y": 3,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 2,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 1,
-        "y": 2,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 11",
-    "car": {
-      "x": 4,
-      "y": 3,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 4,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 2,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 5,
-        "y": 1,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 12",
-    "car": {
-      "x": 4,
-      "y": 2,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 2,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b4",
-        "x": 5,
-        "y": 2,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 13",
-    "car": {
-      "x": 4,
-      "y": 2,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b4",
-        "x": 5,
-        "y": 2,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 14",
-    "car": {
-      "x": 4,
-      "y": 4,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 4,
-        "y": 0,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 2,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 15",
-    "car": {
-      "x": 3,
-      "y": 3,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 4,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 2,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
-      }
-    ]
+    "difficulty_v6opt": 1
   },
   {
     "name": "pulma 16",
@@ -541,114 +91,98 @@
         "y": 0,
         "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 1,
+        "postBlockCarReach": 3,
+        "firstLockReachMin": 3,
+        "forcedSteps": 5,
+        "forcedPCellCount1": 2,
+        "forcedPMinCount": 1,
+        "totalPlacements": 114,
+        "pCellCoverage": 19
+      },
+      "score_v6opt": 298.545762916467,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 2
   },
   {
-    "name": "pulma 17",
+    "name": "pulma 1",
     "car": {
-      "x": 3,
-      "y": 4,
-      "rot": 0
+      "x": 2,
+      "y": 1,
+      "rot": 3
     },
     "buildings": [
       {
         "bid": "b1",
-        "x": 4,
-        "y": 0,
-        "rot": 1
+        "x": 3,
+        "y": 4,
+        "rot": 3
       },
       {
         "bid": "b2",
-        "x": 0,
+        "x": 1,
         "y": 2,
         "rot": 3
       },
       {
         "bid": "b3",
         "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 18",
-    "car": {
-      "x": 1,
-      "y": 1,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 4,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 5,
-        "y": 1,
-        "rot": 3
-      }
-    ]
-  },
-  {
-    "name": "pulma 19",
-    "car": {
-      "x": 3,
-      "y": 3,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 2,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 0,
+        "y": 2,
         "rot": 1
       },
       {
         "bid": "b4",
         "x": 0,
         "y": 0,
-        "rot": 0
+        "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 11,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 5,
+        "forcedPMinCount": 1,
+        "totalPlacements": 53,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 381.7357363157675,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 2
   },
   {
-    "name": "pulma 20",
+    "name": "pulma 7",
     "car": {
-      "x": 2,
+      "x": 3,
       "y": 4,
       "rot": 3
     },
@@ -656,504 +190,294 @@
       {
         "bid": "b1",
         "x": 1,
-        "y": 1,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 0,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 21",
-    "car": {
-      "x": 1,
-      "y": 2,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
         "y": 2,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 22",
-    "car": {
-      "x": 4,
-      "y": 4,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 4,
-        "y": 4,
         "rot": 2
       },
       {
         "bid": "b2",
-        "x": 0,
-        "y": 3,
-        "rot": 3
+        "x": 3,
+        "y": 1,
+        "rot": 1
       },
       {
         "bid": "b3",
-        "x": 3,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 23",
-    "car": {
-      "x": 3,
-      "y": 2,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
         "x": 2,
         "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 24",
-    "car": {
-      "x": 3,
-      "y": 3,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 2,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 0,
         "rot": 1
       },
       {
         "bid": "b4",
-        "x": 5,
-        "y": 3,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 25",
-    "car": {
-      "x": 3,
-      "y": 1,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 2,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 0,
+        "x": 3,
         "y": 5,
         "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 8,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 3,
+        "forcedPMinCount": 1,
+        "totalPlacements": 81,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 504.5085349634509,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 3
   },
   {
-    "name": "pulma 26",
+    "name": "pulma 6",
     "car": {
-      "x": 2,
+      "x": 3,
       "y": 1,
       "rot": 3
     },
     "buildings": [
       {
         "bid": "b1",
-        "x": 2,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 0,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 27",
-    "car": {
-      "x": 3,
-      "y": 4,
-      "rot": 1
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 2,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 28",
-    "car": {
-      "x": 1,
-      "y": 1,
-      "rot": 1
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 3,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
         "x": 3,
         "y": 4,
         "rot": 2
       },
       {
-        "bid": "b4",
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
         "x": 2,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 29",
-    "car": {
-      "x": 3,
-      "y": 3,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 4,
-        "y": 3,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      }
-    ]
-  },
-  {
-    "name": "pulma 30",
-    "car": {
-      "x": 2,
-      "y": 2,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 2,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b4",
-        "x": 1,
-        "y": 1,
-        "rot": 3
-      }
-    ]
-  },
-  {
-    "name": "pulma 31",
-    "car": {
-      "x": 4,
-      "y": 4,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 2,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 1,
-        "y": 1,
-        "rot": 3
-      }
-    ]
-  },
-  {
-    "name": "pulma 32",
-    "car": {
-      "x": 2,
-      "y": 3,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 1,
-        "y": 1,
-        "rot": 1
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 0,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 33",
-    "car": {
-      "x": 4,
-      "y": 2,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 3,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 5,
-        "y": 0,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 34",
-    "car": {
-      "x": 2,
-      "y": 1,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
         "y": 2,
         "rot": 1
       },
       {
         "bid": "b4",
-        "x": 0,
+        "x": 2,
         "y": 0,
         "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 10,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 2,
+        "forcedPMinCount": 1,
+        "totalPlacements": 114,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 733.4332141761441,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 4
+  },
+  {
+    "name": "pulma 2",
+    "car": {
+      "x": 4,
+      "y": 2,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 3,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 3,
+        "rot": 0
+      },
+      {
+        "bid": "b4",
+        "x": 1,
+        "y": 4,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 11,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 1,
+        "forcedPMinCount": 1,
+        "totalPlacements": 70,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 873.8638699649626,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 5
+  },
+  {
+    "name": "pulma 4",
+    "car": {
+      "x": 4,
+      "y": 4,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 3,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 1,
+        "y": 1,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 14,
+        "forcedSteps": 4,
+        "forcedPCellCount1": 2,
+        "forcedPMinCount": 1,
+        "totalPlacements": 77,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 875.991007667391,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 5
+  },
+  {
+    "name": "pulma 3",
+    "car": {
+      "x": 3,
+      "y": 4,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 2,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 17,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 4,
+        "forcedPMinCount": 1,
+        "totalPlacements": 122,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 935.6657735675819,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 5
   },
   {
     "name": "pulma 35",
@@ -1187,33 +511,59 @@
         "y": 0,
         "rot": 3
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 9,
+        "forcedSteps": 4,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 4,
+        "totalPlacements": 166,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 974.9928020803897,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 5
   },
   {
-    "name": "pulma 36",
+    "name": "pulma 10",
     "car": {
-      "x": 1,
+      "x": 3,
       "y": 3,
-      "rot": 0
+      "rot": 3
     },
     "buildings": [
       {
         "bid": "b1",
-        "x": 1,
-        "y": 1,
-        "rot": 2
+        "x": 2,
+        "y": 3,
+        "rot": 3
       },
       {
         "bid": "b2",
-        "x": 0,
-        "y": 1,
+        "x": 1,
+        "y": 2,
         "rot": 3
       },
       {
         "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
+        "x": 4,
+        "y": 0,
+        "rot": 1
       },
       {
         "bid": "b4",
@@ -1221,12 +571,38 @@
         "y": 0,
         "rot": 0
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 2,
+        "forcedPMinCount": 1,
+        "totalPlacements": 83,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1176.7640753776652,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 6
   },
   {
-    "name": "pulma 37",
+    "name": "pulma 25",
     "car": {
-      "x": 2,
+      "x": 3,
       "y": 1,
       "rot": 0
     },
@@ -1234,65 +610,57 @@
       {
         "bid": "b1",
         "x": 0,
-        "y": 4,
-        "rot": 3
+        "y": 0,
+        "rot": 0
       },
       {
         "bid": "b2",
-        "x": 0,
-        "y": 1,
+        "x": 2,
+        "y": 0,
         "rot": 3
       },
       {
         "bid": "b3",
-        "x": 3,
-        "y": 4,
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 5,
         "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 0
       }
-    ]
-  },
-  {
-    "name": "pulma 38",
-    "car": {
-      "x": 2,
-      "y": 2,
-      "rot": 3
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 2,
+        "forcedPMinCount": 1,
+        "totalPlacements": 181,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1226.6731370207124,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
     },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 2,
-        "rot": 1
-      },
-      {
-        "bid": "b2",
-        "x": 3,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b4",
-        "x": 5,
-        "y": 2,
-        "rot": 1
-      }
-    ]
+    "difficulty_v6opt": 6
   },
   {
-    "name": "pulma 39",
+    "name": "pulma 31",
     "car": {
       "x": 4,
       "y": 4,
@@ -1301,13 +669,13 @@
     "buildings": [
       {
         "bid": "b1",
-        "x": 0,
+        "x": 2,
         "y": 0,
         "rot": 0
       },
       {
         "bid": "b2",
-        "x": 4,
+        "x": 0,
         "y": 0,
         "rot": 3
       },
@@ -1319,153 +687,103 @@
       },
       {
         "bid": "b4",
-        "x": 5,
-        "y": 1,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 40",
-    "car": {
-      "x": 1,
-      "y": 3,
-      "rot": 1
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 4,
-        "y": 0,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 3,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 41",
-    "car": {
-      "x": 1,
-      "y": 3,
-      "rot": 1
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 5,
-        "y": 0,
-        "rot": 2
-      },
-      {
-        "bid": "b2",
-        "x": 3,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 42",
-    "car": {
-      "x": 2,
-      "y": 1,
-      "rot": 2
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
+        "x": 1,
         "y": 1,
         "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 3,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 15,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 175,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1246.592328059201,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 6
   },
   {
-    "name": "pulma 43",
+    "name": "pulma 14",
     "car": {
-      "x": 2,
-      "y": 1,
+      "x": 4,
+      "y": 4,
       "rot": 3
     },
     "buildings": [
       {
         "bid": "b1",
         "x": 4,
-        "y": 4,
-        "rot": 1
+        "y": 0,
+        "rot": 2
       },
       {
         "bid": "b2",
         "x": 0,
-        "y": 0,
+        "y": 2,
         "rot": 3
       },
       {
         "bid": "b3",
         "x": 3,
-        "y": 0,
+        "y": 4,
         "rot": 2
       },
       {
         "bid": "b4",
-        "x": 2,
+        "x": 0,
         "y": 0,
-        "rot": 0
+        "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 19,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 1,
+        "forcedPMinCount": 1,
+        "totalPlacements": 155,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1282.2949459885099,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
   },
   {
-    "name": "pulma 44",
+    "name": "pulma 34",
     "car": {
       "x": 2,
-      "y": 2,
+      "y": 1,
       "rot": 0
     },
     "buildings": [
@@ -1477,215 +795,71 @@
       },
       {
         "bid": "b2",
-        "x": 2,
-        "y": 0,
-        "rot": 2
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 3,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 45",
-    "car": {
-      "x": 3,
-      "y": 4,
-      "rot": 0
-    },
-    "buildings": [
-      {
-        "bid": "b1",
         "x": 0,
-        "y": 4,
+        "y": 1,
         "rot": 3
       },
       {
-        "bid": "b2",
-        "x": 3,
-        "y": 0,
-        "rot": 0
-      },
-      {
         "bid": "b3",
-        "x": 1,
-        "y": 1,
-        "rot": 0
+        "x": 4,
+        "y": 2,
+        "rot": 1
       },
       {
         "bid": "b4",
         "x": 0,
         "y": 0,
-        "rot": 0
+        "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 16,
+        "forcedSteps": 4,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 173,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1286.4314322432579,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
   },
   {
-    "name": "pulma 46",
+    "name": "pulma 22",
     "car": {
-      "x": 3,
+      "x": 4,
       "y": 4,
       "rot": 3
     },
     "buildings": [
       {
         "bid": "b1",
-        "x": 1,
-        "y": 1,
-        "rot": 1
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 47",
-    "car": {
-      "x": 1,
-      "y": 2,
-      "rot": 2
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 4,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 48",
-    "car": {
-      "x": 2,
-      "y": 2,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 49",
-    "car": {
-      "x": 2,
-      "y": 1,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
         "x": 4,
         "y": 4,
-        "rot": 3
+        "rot": 2
       },
       {
         "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
         "x": 0,
         "y": 3,
         "rot": 3
       },
       {
-        "bid": "b4",
-        "x": 2,
-        "y": 0,
-        "rot": 0
-      }
-    ]
-  },
-  {
-    "name": "pulma 50",
-    "car": {
-      "x": 1,
-      "y": 4,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 1,
-        "rot": 3
-      },
-      {
         "bid": "b3",
         "x": 3,
         "y": 0,
@@ -1697,143 +871,33 @@
         "y": 0,
         "rot": 0
       }
-    ]
-  },
-  {
-    "name": "pulma 51",
-    "car": {
-      "x": 3,
-      "y": 3,
-      "rot": 3
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 16,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 167,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1290.1320824053919,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
     },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 2,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 0,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 5,
-        "y": 3,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 52",
-    "car": {
-      "x": 1,
-      "y": 4,
-      "rot": 1
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 4,
-        "y": 3,
-        "rot": 1
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b3",
-        "x": 4,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 1,
-        "rot": 1
-      }
-    ]
-  },
-  {
-    "name": "pulma 53",
-    "car": {
-      "x": 1,
-      "y": 3,
-      "rot": 1
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 3,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 4,
-        "y": 0,
-        "rot": 1
-      },
-      {
-        "bid": "b3",
-        "x": 0,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 3,
-        "y": 5,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "pulma 54",
-    "car": {
-      "x": 1,
-      "y": 2,
-      "rot": 2
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 3
-      },
-      {
-        "bid": "b2",
-        "x": 0,
-        "y": 1,
-        "rot": 3
-      },
-      {
-        "bid": "b3",
-        "x": 3,
-        "y": 4,
-        "rot": 2
-      },
-      {
-        "bid": "b4",
-        "x": 0,
-        "y": 0,
-        "rot": 2
-      }
-    ]
+    "difficulty_v6opt": 7
   },
   {
     "name": "pulma 55",
@@ -1867,21 +931,767 @@
         "y": 0,
         "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 16,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 179,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1293.6100697962977,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
   },
   {
-    "name": "pulma 56",
+    "name": "pulma 53",
     "car": {
       "x": 1,
       "y": 3,
-      "rot": 2
+      "rot": 1
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 3,
+        "y": 5,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 16,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 186,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1295.6876664578049,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 21",
+    "car": {
+      "x": 1,
+      "y": 2,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 2,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 16,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 176,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1308.537022757657,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 28",
+    "car": {
+      "x": 1,
+      "y": 1,
+      "rot": 1
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 3,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 3,
+        "firstLockReachMin": 17,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 190,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1362.2739736711353,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 52",
+    "car": {
+      "x": 1,
+      "y": 4,
+      "rot": 1
     },
     "buildings": [
       {
         "bid": "b1",
         "x": 4,
+        "y": 3,
+        "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 0,
         "y": 1,
         "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 17,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 4,
+        "totalPlacements": 185,
+        "pCellCoverage": 19
+      },
+      "score_v6opt": 1369.2105417508817,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 19",
+    "car": {
+      "x": 3,
+      "y": 3,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 2,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 16,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 134,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1385.025226245019,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 15",
+    "car": {
+      "x": 3,
+      "y": 3,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 4,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 2,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 18,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 1,
+        "forcedPMinCount": 1,
+        "totalPlacements": 126,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1438.143785752404,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 32",
+    "car": {
+      "x": 2,
+      "y": 3,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 1,
+        "y": 1,
+        "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 0,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 1,
+        "forcedPMinCount": 1,
+        "totalPlacements": 185,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1443.698806911408,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 33",
+    "car": {
+      "x": 4,
+      "y": 2,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 3,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 0,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 4,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 176,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1455.4262589865837,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 9",
+    "car": {
+      "x": 4,
+      "y": 2,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 2,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 3,
+        "firstLockReachMin": 18,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 1,
+        "forcedPMinCount": 1,
+        "totalPlacements": 126,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1457.8795546555511,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 7
+  },
+  {
+    "name": "pulma 13",
+    "car": {
+      "x": 4,
+      "y": 2,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 2,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 170,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1474.8573301038193,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 12",
+    "car": {
+      "x": 4,
+      "y": 2,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 2,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 2,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 174,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1476.0562564946513,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 30",
+    "car": {
+      "x": 2,
+      "y": 2,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 2,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b4",
+        "x": 1,
+        "y": 1,
+        "rot": 3
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 215,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1486.9705536164788,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 50",
+    "car": {
+      "x": 1,
+      "y": 4,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
       },
       {
         "bid": "b2",
@@ -1899,16 +1709,42 @@
         "bid": "b4",
         "x": 0,
         "y": 0,
-        "rot": 2
+        "rot": 0
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 217,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1487.4484487621016,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
   },
   {
-    "name": "pulma 57",
+    "name": "pulma 43",
     "car": {
-      "x": 1,
-      "y": 3,
-      "rot": 1
+      "x": 2,
+      "y": 1,
+      "rot": 3
     },
     "buildings": [
       {
@@ -1916,6 +1752,66 @@
         "x": 4,
         "y": 4,
         "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 0,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 197,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1492.1777193609194,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 27",
+    "car": {
+      "x": 3,
+      "y": 4,
+      "rot": 1
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 2,
+        "y": 4,
+        "rot": 3
       },
       {
         "bid": "b2",
@@ -1935,7 +1831,753 @@
         "y": 0,
         "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 190,
+        "pCellCoverage": 19
+      },
+      "score_v6opt": 1496.1874050535482,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 47",
+    "car": {
+      "x": 1,
+      "y": 2,
+      "rot": 2
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 206,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1500.5622073033283,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 37",
+    "car": {
+      "x": 2,
+      "y": 1,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 217,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1503.2468719221254,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 54",
+    "car": {
+      "x": 1,
+      "y": 2,
+      "rot": 2
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 222,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1504.422687754357,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 42",
+    "car": {
+      "x": 2,
+      "y": 1,
+      "rot": 2
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 3,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 21,
+        "forcedSteps": 4,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 187,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1504.504362465218,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 26",
+    "car": {
+      "x": 2,
+      "y": 1,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 2,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 0,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 170,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1530.6274003190413,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 11",
+    "car": {
+      "x": 4,
+      "y": 3,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 4,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 2,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 1,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 206,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1530.7156597409823,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 18",
+    "car": {
+      "x": 1,
+      "y": 1,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 4,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 1,
+        "rot": 3
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 208,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1531.2142333539784,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 36",
+    "car": {
+      "x": 1,
+      "y": 3,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 1,
+        "y": 1,
+        "rot": 2
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 185,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1540.9674441183904,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 17",
+    "car": {
+      "x": 3,
+      "y": 4,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 2,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 19,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 161,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1542.0532697489489,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 39",
+    "car": {
+      "x": 4,
+      "y": 4,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 4,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 1,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 2,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 221,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1544.1612950633441,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 38",
+    "car": {
+      "x": 2,
+      "y": 2,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 2,
+        "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 3,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 2,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 6,
+        "firstLockReachMin": 16,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 154,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1547.412541904605,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 45",
+    "car": {
+      "x": 3,
+      "y": 4,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 3,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b3",
+        "x": 1,
+        "y": 1,
+        "rot": 0
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 5,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 18,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 1,
+        "forcedPMinCount": 1,
+        "totalPlacements": 143,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1550.989496026849,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
   },
   {
     "name": "pulma 58",
@@ -1969,7 +2611,273 @@
         "y": 1,
         "rot": 3
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 3,
+        "firstLockReachMin": 20,
+        "forcedSteps": 2,
+        "forcedPCellCount1": 1,
+        "forcedPMinCount": 1,
+        "totalPlacements": 200,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1562.9795303332203,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 44",
+    "car": {
+      "x": 2,
+      "y": 2,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 2,
+        "y": 0,
+        "rot": 2
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 3,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 158,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1577.217740150391,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 29",
+    "car": {
+      "x": 3,
+      "y": 3,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 4,
+        "y": 3,
+        "rot": 2
+      },
+      {
+        "bid": "b2",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 179,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1593.5676001108006,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 46",
+    "car": {
+      "x": 3,
+      "y": 4,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 1,
+        "y": 1,
+        "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 166,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1605.3797158855223,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
+  },
+  {
+    "name": "pulma 56",
+    "car": {
+      "x": 1,
+      "y": 3,
+      "rot": 2
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 4,
+        "y": 1,
+        "rot": 1
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 4,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 200,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1618.9256747349552,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
   },
   {
     "name": "pulma 59",
@@ -2003,7 +2911,33 @@
         "y": 5,
         "rot": 0
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 8,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 191,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1655.8231712136317,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
   },
   {
     "name": "pulma 60",
@@ -2037,26 +2971,232 @@
         "y": 0,
         "rot": 0
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 3,
+        "postBlockCarReach": 4,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 170,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1656.496243192318,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 8
   },
   {
-    "name": "extra 1",
+    "name": "pulma 23",
     "car": {
       "x": 3,
+      "y": 2,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 3,
+        "y": 4,
+        "rot": 2
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 163,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1700.854047242497,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
+  },
+  {
+    "name": "pulma 57",
+    "car": {
+      "x": 1,
       "y": 3,
       "rot": 1
     },
     "buildings": [
       {
         "bid": "b1",
-        "x": 0,
-        "y": 0,
-        "rot": 0
+        "x": 4,
+        "y": 4,
+        "rot": 1
       },
       {
         "bid": "b2",
         "x": 0,
-        "y": 2,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 186,
+        "pCellCoverage": 19
+      },
+      "score_v6opt": 1701.5746617388224,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
+  },
+  {
+    "name": "pulma 49",
+    "car": {
+      "x": 2,
+      "y": 1,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 4,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 0
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 3,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 187,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1711.7736263807667,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
+  },
+  {
+    "name": "pulma 48",
+    "car": {
+      "x": 2,
+      "y": 2,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 4,
+        "rot": 3
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 1,
         "rot": 3
       },
       {
@@ -2068,13 +3208,39 @@
       {
         "bid": "b4",
         "x": 0,
-        "y": 5,
+        "y": 0,
         "rot": 0
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 5,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 190,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1732.330276643693,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
   },
   {
-    "name": "extra 2",
+    "name": "pulma 51",
     "car": {
       "x": 3,
       "y": 3,
@@ -2083,9 +3249,9 @@
     "buildings": [
       {
         "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 2
+        "x": 2,
+        "y": 0,
+        "rot": 0
       },
       {
         "bid": "b2",
@@ -2095,24 +3261,50 @@
       },
       {
         "bid": "b3",
-        "x": 3,
+        "x": 4,
         "y": 0,
-        "rot": 0
+        "rot": 1
       },
       {
         "bid": "b4",
         "x": 5,
-        "y": 2,
+        "y": 3,
         "rot": 1
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 6,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 167,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1735.4954651602006,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
   },
   {
-    "name": "extra 3",
+    "name": "pulma 40",
     "car": {
-      "x": 4,
-      "y": 4,
-      "rot": 3
+      "x": 1,
+      "y": 3,
+      "rot": 1
     },
     "buildings": [
       {
@@ -2123,9 +3315,9 @@
       },
       {
         "bid": "b2",
-        "x": 4,
-        "y": 3,
-        "rot": 1
+        "x": 3,
+        "y": 0,
+        "rot": 3
       },
       {
         "bid": "b3",
@@ -2139,74 +3331,272 @@
         "y": 0,
         "rot": 2
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 172,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1743.6952359732002,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
   },
   {
-    "name": "extra 4",
+    "name": "pulma 41",
+    "car": {
+      "x": 1,
+      "y": 3,
+      "rot": 1
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 4,
+        "y": 0,
+        "rot": 2
+      },
+      {
+        "bid": "b2",
+        "x": 3,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 0,
+        "y": 3,
+        "rot": 3
+      },
+      {
+        "bid": "b4",
+        "x": 0,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 4,
+        "postBlockCarReach": 2,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 172,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1743.6952359732002,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
+  },
+  {
+    "name": "pulma 5",
+    "car": {
+      "x": 2,
+      "y": 4,
+      "rot": 3
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 1,
+        "y": 2,
+        "rot": 2
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 0,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 1,
+        "y": 1,
+        "rot": 0
+      },
+      {
+        "bid": "b4",
+        "x": 2,
+        "y": 0,
+        "rot": 2
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 5,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 154,
+        "pCellCoverage": 20
+      },
+      "score_v6opt": 1788.361524845785,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
+  },
+  {
+    "name": "pulma 24",
     "car": {
       "x": 3,
+      "y": 3,
+      "rot": 0
+    },
+    "buildings": [
+      {
+        "bid": "b1",
+        "x": 0,
+        "y": 0,
+        "rot": 0
+      },
+      {
+        "bid": "b2",
+        "x": 0,
+        "y": 2,
+        "rot": 3
+      },
+      {
+        "bid": "b3",
+        "x": 4,
+        "y": 0,
+        "rot": 1
+      },
+      {
+        "bid": "b4",
+        "x": 5,
+        "y": 3,
+        "rot": 1
+      }
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 5,
+        "postBlockCarReach": 5,
+        "firstLockReachMin": 20,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 2,
+        "totalPlacements": 155,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1828.0671327264583,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 9
+  },
+  {
+    "name": "pulma 20",
+    "car": {
+      "x": 2,
       "y": 4,
       "rot": 3
     },
     "buildings": [
       {
         "bid": "b1",
-        "x": 0,
-        "y": 4,
-        "rot": 2
+        "x": 1,
+        "y": 1,
+        "rot": 0
       },
       {
         "bid": "b2",
-        "x": 3,
-        "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b3",
         "x": 0,
         "y": 0,
-        "rot": 0
-      },
-      {
-        "bid": "b4",
-        "x": 3,
-        "y": 5,
-        "rot": 2
-      }
-    ]
-  },
-  {
-    "name": "extra 5",
-    "car": {
-      "x": 4,
-      "y": 3,
-      "rot": 3
-    },
-    "buildings": [
-      {
-        "bid": "b1",
-        "x": 0,
-        "y": 3,
         "rot": 3
       },
       {
-        "bid": "b2",
-        "x": 4,
-        "y": 3,
-        "rot": 1
-      },
-      {
         "bid": "b3",
         "x": 3,
-        "y": 1,
+        "y": 0,
         "rot": 2
       },
       {
         "bid": "b4",
-        "x": 3,
+        "x": 2,
         "y": 0,
-        "rot": 2
+        "rot": 0
       }
-    ]
+    ],
+    "_metrics_v6opt": {
+      "weights": {
+        "w_minBlockK": 106.23245363818862,
+        "w_postBlockCarReach": 9.818194617544032,
+        "w_firstLockReachMin": 45.95187559767788,
+        "w_forcedSteps": 5.304805667454993,
+        "w_forcedPCellCount1": 119.48416525207256,
+        "w_log_forcedPMinCount": 54.916258859583905,
+        "w_log_totalPlacements": 51.85125625103461,
+        "w_log_pCellCoverage": 2.1362776151854703
+      },
+      "features": {
+        "minBlockK": 6,
+        "postBlockCarReach": 1,
+        "firstLockReachMin": 21,
+        "forcedSteps": 0,
+        "forcedPCellCount1": 0,
+        "forcedPMinCount": 3,
+        "totalPlacements": 176,
+        "pCellCoverage": 21
+      },
+      "score_v6opt": 1963.3255949668599,
+      "spearman_vs_commercial": 0.5104195609891636,
+      "note": "Weights optimized by random search to maximize Spearman rank correlation vs commercial order (no extras)."
+    },
+    "difficulty_v6opt": 10
   }
 ]

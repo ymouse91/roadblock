@@ -5,7 +5,14 @@ const FILES = [
   "./index.html",
   "./manifest.webmanifest",
   "./icon192.png",
-  "./roadblock_puzzles.json"
+  "./roadblock_puzzles.json",
+  "./roof1.png",
+  "./roof2.png",
+  "./roof3.png",
+  "./roof4.png",
+  "./police.png",
+  "./redcar.png"
+
 ];
 
 self.addEventListener("install", (e) => {
